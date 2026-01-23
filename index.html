@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>VergeCloud</title>
-
   <style>
     body {
       margin: 0;
@@ -21,44 +20,58 @@
 
     h1 {
       font-size: 3rem;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 1.2rem;
-      opacity: 0.9;
-    }
-
-    .section {
-      padding: 60px;
-      text-align: center;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 28px;
-      background: #00c6ff;
-      color: black;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-    }
-  </style>
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>VergeCloud</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-<header>
+<!-- HERO -->
+<section class="hero">
   <h1>VergeCloud</h1>
   <p>Fast. Secure. Edge-Optimized Cloud Platform</p>
-  <a href="features.html" class="btn">Explore Features</a>
-</header>
-
-<section class="section" id="features">
-  <h2>Why VergeCloud?</h2>
-  <p>Global CDN • DNS Load Balancing • Edge Security • Analytics</p>
+  <a href="#features" class="btn">Explore Features</a>
 </section>
+
+<!-- FEATURES -->
+<section id="features">
+  <h2>Features</h2>
+  <p>Global CDN, DNS Load Balancing, Edge Security, Analytics</p>
+</section>
+
+<!-- PRODUCT -->
+<section id="product">
+  <h2>Product</h2>
+  <p>VergeCloud accelerates applications with global edge infrastructure.</p>
+  <img src="images/dashboard.png" width="70%">
+</section>
+
+<!-- DEMO -->
+<section id="demo">
+  <h2>Demo</h2>
+  <video width="70%" controls>
+    <source src="videos/demo-placeholder.mp4" type="video/mp4">
+  </video>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+  <input placeholder="Name"><br><br>
+  <input placeholder="Email"><br><br>
+  <textarea placeholder="Message"></textarea><br><br>
+  <button class="btn">Send</button>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 VergeCloud. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
+
 
