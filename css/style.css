@@ -50,40 +50,53 @@ body {
 .navbar a {
   color: #fff;
   margin: 0 15px;
+ body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #020617, #020b2d);
+  color: white;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.85);
+  padding: 15px 0;
+  text-align: center;
+  z-index: 1000;
+}
+
+nav a {
+  color: #00d9ff;
+  margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
 }
 
-.navbar a:hover {
-  color: #00e5ff;
+nav a:hover {
+  color: white;
 }
 
-/* SECTIONS */
 section {
-  padding: 100px 10%;
   min-height: 100vh;
+  padding: 120px 20px 40px;
   text-align: center;
 }
 
-.hero {
-  background: linear-gradient(135deg, #0050ff, #00bfff);
+h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
 }
 
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 30px;
-  background: #00e5ff;
-  color: #000;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
+h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
 }
 
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #070b14;
+p {
+  font-size: 18px;
+  opacity: 0.85;
 }
 
 
