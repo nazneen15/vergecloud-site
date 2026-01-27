@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>VergeCloud</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: "Inter", sans-serif;
+      font-family: Inter, sans-serif;
     }
 
     body {
@@ -19,19 +18,20 @@
       color: #0f172a;
     }
 
-    /* NAVBAR */
     header {
-      background: rgba(255, 255, 255, 0.9);
-      backdrop-filter: blur(10px);
-      padding: 18px 60px;
+      background: white;
+      padding: 20px 60px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
 
     nav a {
-      margin-right: 25px;
+      margin-left: 25px;
       text-decoration: none;
       color: #1e293b;
       font-weight: 500;
@@ -41,42 +41,28 @@
       color: #2563eb;
     }
 
-    /* HERO */
-    .hero {
+    .section {
       padding: 80px 60px;
+    }
+
+    .hero {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 60px;
+      gap: 50px;
       align-items: center;
     }
 
     .hero h1 {
       font-size: 44px;
-      font-weight: 700;
       margin-bottom: 15px;
     }
 
     .hero p {
       font-size: 18px;
       color: #475569;
-      line-height: 1.6;
     }
 
-    .hero img {
-      width: 100%;
-      max-width: 520px;
-      animation: float 5s ease-in-out infinite;
-    }
-
-    @keyframes float {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-      100% { transform: translateY(0); }
-    }
-
-    /* SECTIONS */
-    .section {
-      padding: 60px;
+    .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 30px;
@@ -86,54 +72,31 @@
       background: white;
       padding: 30px;
       border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-      transition: 0.3s ease;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.05);
+      transition: 0.3s;
     }
 
     .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+      transform: translateY(-8px);
     }
 
-    .card h3 {
-      margin-bottom: 10px;
-      color: #0f172a;
-    }
-
-    .card p {
-      color: #475569;
-      font-size: 15px;
-      line-height: 1.6;
-    }
-
-    /* CONTACT */
-    .contact {
-      background: linear-gradient(135deg, #e0ecff, #f8fbff);
-      padding: 70px 60px;
-      text-align: center;
-    }
-
-    .contact h2 {
-      font-size: 32px;
+    .card img {
+      width: 100%;
+      border-radius: 14px;
       margin-bottom: 15px;
     }
 
-    .contact p {
-      font-size: 18px;
+    video {
+      width: 100%;
+      border-radius: 16px;
+      margin-top: 20px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
     }
 
-    .contact a {
-      color: #2563eb;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    /* FOOTER */
     footer {
       text-align: center;
-      padding: 20px;
+      padding: 30px;
       color: #64748b;
-      font-size: 14px;
     }
 
     @media (max-width: 900px) {
@@ -147,69 +110,98 @@
 <body>
 
 <header>
-  <h3>☁️ VergeCloud</h3>
+  <h2>☁️ VergeCloud</h2>
   <nav>
-    <a href="#home">Home</a>
-    <a href="#features">Features</a>
-    <a href="#product">Product</a>
-    <a href="#demo">Demo</a>
-    <a href="#contact">Contact</a>
+    <a href="#">Home</a>
+    <a href="#">Features</a>
+    <a href="#">Product</a>
+    <a href="#">Demo</a>
+    <a href="#">Contact</a>
   </nav>
 </header>
 
-<section class="hero" id="home">
+<!-- ================= HERO SECTION ================= -->
+<section class="section hero">
   <div>
-    <h1>Edge-powered performance platform</h1>
+    <h1>Edge-powered Performance Platform</h1>
     <p>
-      VergeCloud accelerates and secures your applications with
-      CDN, DNS, WAF, DDoS protection, and real-time analytics.
+      VergeCloud accelerates websites with global CDN, enterprise security,
+      real-time analytics, and intelligent traffic routing.
     </p>
   </div>
 
+  <!-- ⭐ IMAGE SECTION -->
   <img src="https://cdn-icons-png.flaticon.com/512/4149/4149678.png" alt="Cloud Infrastructure">
 </section>
 
-<section class="section" id="features">
-  <div class="card">
-    <h3>⚡ CDN</h3>
-    <p>Deliver content globally with ultra-low latency and high availability.</p>
-  </div>
+<!-- ================= FEATURES ================= -->
+<section class="section">
+  <h1>Core Features</h1>
 
-  <div class="card">
-    <h3>🛡️ Security</h3>
-    <p>WAF, DDoS protection, rate limiting, and bot defense.</p>
-  </div>
+  <div class="grid">
 
-  <div class="card">
-    <h3>📊 Analytics</h3>
-    <p>Real-time insights into traffic, performance, and threats.</p>
-  </div>
-</section>
+    <!-- ⭐ IMAGE CARD -->
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/4712/4712035.png">
+      <h3>Global CDN</h3>
+      <p>Deliver content faster using edge nodes worldwide.</p>
+    </div>
 
-<section class="section" id="product">
-  <div class="card">
-    <h3>High-performance Infrastructure</h3>
-    <p>
-      Built for speed, scalability, and security using modern edge computing.
-    </p>
-  </div>
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/1006/1006771.png">
+      <h3>Security</h3>
+      <p>WAF, DDoS protection, rate limiting & bot control.</p>
+    </div>
 
-  <div class="card">
-    <h3>Demo</h3>
-    <p>Live demo coming soon.</p>
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png">
+      <h3>Analytics</h3>
+      <p>Real-time visibility into traffic and performance.</p>
+    </div>
+
   </div>
 </section>
 
-<section class="contact" id="contact">
-  <h2>Contact Us</h2>
-  <p>Email: <a href="mailto:support@vergecloud.com">support@vergecloud.com</a></p>
+<!-- ================= PRODUCT SECTION ================= -->
+<section class="section">
+  <h1>Our Products</h1>
+
+  <div class="grid">
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/2920/2920277.png">
+      <h3>Edge CDN</h3>
+      <p>Lightning-fast delivery across continents.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/921/921490.png">
+      <h3>DNS</h3>
+      <p>Highly available DNS with instant propagation.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/483/483947.png">
+      <h3>WAF</h3>
+      <p>Advanced protection against attacks.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VIDEO DEMO ================= -->
+<section class="section">
+  <h1>Platform Demo</h1>
+  <p>Watch how VergeCloud works in real-time.</p>
+
+  <!-- ⭐ VIDEO -->
+  <video controls>
+    <source src="video/demo.mp4" type="video/mp4">
+  </video>
 </section>
 
 <footer>
-  © 2026 VergeCloud. All rights reserved.
+  © 2026 VergeCloud — Built for speed & security
 </footer>
 
 </body>
 </html>
-
 
