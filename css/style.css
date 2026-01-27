@@ -1,66 +1,60 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>VergeCloud</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <nav class="navbar">
-      <div class="nav-left">
-        <a href="#home" class="active">Home</a>
-        <a href="#features">Features</a>
-        <a href="#product">Product</a>
-        <a href="#demo">Demo</a>
-        <a href="#contact">Contact</a>
-      </div>
-      <div class="nav-right">
-        <a href="mailto:support@vergecloud.com">support@vergecloud.com</a>
-      </div>
-    </nav>
-  </header>
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(180deg, #eef5ff, #ffffff);
+  color: #0f172a;
+}
 
-  <main>
-    <section class="hero">
-      <div class="hero-left">
-        <div class="logo">
-          <img src="https://i.imgur.com/8Q6xXFl.png" alt="VergeCloud Logo" />
-          <h1>VergeCloud</h1>
-        </div>
-        <p class="tagline">Edge-powered performance platform</p>
+header {
+  background: white;
+  padding: 18px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
 
-        <div class="cards">
-          <div class="card">
-            <h2>Features</h2>
-            <p>CDN • DNS • WAF • DDoS Protection • Analytics</p>
-            <p>High-performance cloud infrastructure built for speed and security.</p>
-          </div>
+nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #1e293b;
+  font-weight: 500;
+}
 
-          <div class="card">
-            <h2>Product</h2>
-            <p>High-performance cloud infrastructure built for speed and security.</p>
-          </div>
+nav a:hover {
+  color: #2563eb;
+}
 
-          <div class="card">
-            <h2>Demo</h2>
-            <p>Live demo coming soon.</p>
-          </div>
+.section {
+  padding: 70px 60px;
+}
 
-          <div class="card">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:support@vergecloud.com">support@vergecloud.com</a></p>
-          </div>
-        </div>
-      </div>
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
 
-      <div class="hero-right">
-        <img src="https://i.imgur.com/azx95wl.png" alt="Cloud Servers Illustration" />
-      </div>
-    </section>
-  </main>
-</body>
-</html>
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
 
+.card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+h1, h2 {
+  margin-bottom: 15px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #64748b;
+}
 
