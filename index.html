@@ -1,7 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
   <title>VergeCloud</title>
+
+  <!-- REQUIRED for mobile responsiveness -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -22,14 +27,18 @@
 <!-- HERO -->
 <section class="hero">
   <div class="container hero-grid">
-    <div>
+    <div class="hero-text">
       <h1>Edge-Powered Performance Platform</h1>
       <p>
         VergeCloud helps businesses deliver ultra-fast, secure, and reliable
         digital experiences using global CDN, WAF, DNS, and real-time analytics.
       </p>
     </div>
-    <img src="images/hero.png">
+
+    <!-- Image path must be correct -->
+    <div class="hero-image">
+      <img src="images/hero.png" alt="VergeCloud platform">
+    </div>
   </div>
 </section>
 
@@ -40,19 +49,19 @@
 
     <div class="grid">
       <div class="card">
-        <img src="images/cdn.png">
+        <img src="images/cdn.png" alt="Global CDN">
         <h3>Global CDN</h3>
         <p>Deliver content with ultra-low latency worldwide.</p>
       </div>
 
       <div class="card">
-        <img src="images/security.png">
+        <img src="images/security.png" alt="Advanced Security">
         <h3>Advanced Security</h3>
         <p>WAF, DDoS protection and bot mitigation.</p>
       </div>
 
       <div class="card">
-        <img src="images/analytics.png">
+        <img src="images/analytics.png" alt="Real-time Analytics">
         <h3>Real-time Analytics</h3>
         <p>Monitor traffic and performance instantly.</p>
       </div>
@@ -64,9 +73,13 @@
 <section class="section video-section">
   <div class="container">
     <h2>See VergeCloud in Action</h2>
-    <video controls>
-      <source src="video/demo.mp4" type="video/mp4">
-    </video>
+
+    <div class="video-wrapper">
+      <video controls>
+        <source src="video/demo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
   </div>
 </section>
 
