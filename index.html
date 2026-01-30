@@ -1,188 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>VergeCloud</title>
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Inter, sans-serif;
-    }
-
-    body {
-      background: linear-gradient(180deg, #eef5ff, #ffffff);
-      color: #0f172a;
-    }
-
-    header {
-      background: white;
-      padding: 18px 60px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    nav a {
-      margin-left: 25px;
-      cursor: pointer;
-      text-decoration: none;
-      color: #1e293b;
-      font-weight: 500;
-    }
-
-    nav a:hover {
-      color: #2563eb;
-    }
-
-    .section {
-      display: none;
-      padding: 80px 60px;
-      animation: fadeIn 0.5s ease;
-    }
-
-    .section.active {
-      display: block;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-    }
-
-    .card {
-      background: white;
-      padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.06);
-    }
-
-    .card img {
-      width: 100%;
-      border-radius: 12px;
-      margin-bottom: 15px;
-    }
-
-    video {
-      width: 100%;
-      border-radius: 16px;
-      margin-top: 20px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-    }
-
-    footer {
-      text-align: center;
-      padding: 25px;
-      color: #64748b;
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header>
   <h3>☁️ VergeCloud</h3>
   <nav>
-    <a onclick="showTab('home')">Home</a>
-    <a onclick="showTab('features')">Features</a>
-    <a onclick="showTab('product')">Product</a>
-    <a onclick="showTab('demo')">Demo</a>
-    <a onclick="showTab('contact')">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="features.html">Features</a>
+    <a href="product.html">Product</a>
+    <a href="demo.html">Demo</a>
+    <a href="contact.html">Contact</a>
   </nav>
 </header>
 
-<!-- HOME -->
-<section id="home" class="section active">
-  <h1>Edge-powered Performance Platform</h1>
-  <p>VergeCloud helps businesses deliver secure, fast, and reliable digital experiences.</p>
-
-  <img src="https://cdn-icons-png.flaticon.com/512/4149/4149678.png" width="450">
-</section>
-
-<!-- FEATURES -->
-<section id="features" class="section">
-  <h1>Platform Features</h1>
-  <div class="grid">
-    <div class="card">
-      <img src="https://cdn-icons-png.flaticon.com/512/4712/4712035.png">
-      <h3>Global CDN</h3>
-      <p>Ultra-fast content delivery using edge locations worldwide.</p>
-    </div>
-    <div class="card">
-      <img src="https://cdn-icons-png.flaticon.com/512/1006/1006771.png">
-      <h3>Security</h3>
-      <p>WAF, DDoS mitigation, bot protection.</p>
-    </div>
-    <div class="card">
-      <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png">
-      <h3>Analytics</h3>
-      <p>Real-time traffic and performance monitoring.</p>
-    </div>
+<section class="hero">
+  <div>
+    <h1>Edge-Powered Performance Platform</h1>
+    <p>Accelerate, secure and scale your applications globally.</p>
   </div>
+  <img src="images/hero.png">
 </section>
 
-<!-- PRODUCT -->
-<section id="product" class="section">
-  <h1>Products</h1>
-  <div class="grid">
-    <div class="card">
-      <h3>Edge CDN</h3>
-      <p>Optimized content delivery with intelligent caching.</p>
-    </div>
-    <div class="card">
-      <h3>DNS</h3>
-      <p>Highly available DNS with global routing.</p>
-    </div>
-    <div class="card">
-      <h3>WAF</h3>
-      <p>Enterprise-grade security for modern apps.</p>
-    </div>
-  </div>
-</section>
-
-<!-- DEMO -->
-<section id="demo" class="section">
-  <h1>Product Demo</h1>
-  <p>Watch VergeCloud in action.</p>
-
-  <video controls>
-    <source src="video/demo.mp4" type="video/mp4">
-  </video>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="section">
-  <h1>Contact Us</h1>
-  <p>Reach out to our team for a demo or partnership.</p>
-  <p><b>Email:</b> support@vergecloud.com</p>
-</section>
-
-<footer>
-  © 2026 VergeCloud — All Rights Reserved
-</footer>
-
-<script>
-  function showTab(tabId) {
-    document.querySelectorAll('.section').forEach(sec => {
-      sec.classList.remove('active');
-    });
-
-    document.getElementById(tabId).classList.add('active');
-  }
-</script>
-
+<footer>© 2026 VergeCloud</footer>
 </body>
 </html>
 
