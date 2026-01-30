@@ -1,95 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>VergeCloud – Edge Performance Platform</title>
+  <title>VergeCloud</title>
   <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header class="header">
-  <div class="logo">☁ VergeCloud</div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="features.html">Features</a>
-    <a href="product.html">Product</a>
-    <a href="demo.html">Demo</a>
-    <a href="contact.html" class="btn">Get Started</a>
-  </nav>
+<header>
+  <div class="container header-inner">
+    <h3>☁ VergeCloud</h3>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="product.html">Product</a>
+      <a href="demo.html">Demo</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
 </header>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-text">
-    <h1>Edge-Powered Performance Platform</h1>
-    <p>
-      Accelerate, secure, and optimize your applications using
-      global CDN, intelligent routing, enterprise-grade WAF,
-      and real-time analytics.
-    </p>
-    <div class="hero-buttons">
-      <a href="demo.html" class="btn primary">Watch Demo</a>
-      <a href="contact.html" class="btn secondary">Request Access</a>
+  <div class="container hero-grid">
+    <div>
+      <h1>Edge-Powered Performance Platform</h1>
+      <p>
+        VergeCloud helps businesses deliver ultra-fast, secure, and reliable
+        digital experiences using global CDN, WAF, DNS, and real-time analytics.
+      </p>
     </div>
-  </div>
-
-  <div class="hero-media">
-    <img src="images/hero.png" alt="Cloud Infrastructure">
+    <img src="images/hero.png">
   </div>
 </section>
 
 <!-- FEATURES -->
 <section class="section">
-  <h2>Why Choose VergeCloud?</h2>
-  <p class="section-subtitle">
-    Everything you need to deliver fast, secure, and reliable digital experiences.
-  </p>
+  <div class="container">
+    <h2>Why Choose VergeCloud?</h2>
 
-  <div class="grid">
-    <div class="card">
-      <img src="images/cdn.png">
-      <h3>Global CDN</h3>
-      <p>
-        Deliver content from edge locations worldwide with ultra-low latency.
-      </p>
-    </div>
+    <div class="grid">
+      <div class="card">
+        <img src="images/cdn.png">
+        <h3>Global CDN</h3>
+        <p>Deliver content with ultra-low latency worldwide.</p>
+      </div>
 
-    <div class="card">
-      <img src="images/security.png">
-      <h3>Advanced Security</h3>
-      <p>
-        Built-in WAF, DDoS protection, and bot mitigation at the edge.
-      </p>
-    </div>
+      <div class="card">
+        <img src="images/security.png">
+        <h3>Advanced Security</h3>
+        <p>WAF, DDoS protection and bot mitigation.</p>
+      </div>
 
-    <div class="card">
-      <img src="images/analytics.png">
-      <h3>Real-Time Analytics</h3>
-      <p>
-        Monitor traffic, performance, and threats with live dashboards.
-      </p>
+      <div class="card">
+        <img src="images/analytics.png">
+        <h3>Real-time Analytics</h3>
+        <p>Monitor traffic and performance instantly.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- VIDEO SECTION -->
-<section class="video-section">
-  <h2>See VergeCloud in Action</h2>
-  <p>Understand how VergeCloud accelerates and protects your applications.</p>
-
-  <div class="video-wrapper">
-    <iframe
-      src="https://www.youtube.com/embed/VIDEO_ID"
-      title="VergeCloud Demo"
-      frameborder="0"
-      allowfullscreen>
-    </iframe>
+<!-- DEMO -->
+<section class="section video-section">
+  <div class="container">
+    <h2>See VergeCloud in Action</h2>
+    <video controls>
+      <source src="video/demo.mp4" type="video/mp4">
+    </video>
   </div>
 </section>
 
 <footer>
-  <p>© 2026 VergeCloud. All rights reserved.</p>
+  © 2026 VergeCloud. All rights reserved.
 </footer>
 
 </body>
