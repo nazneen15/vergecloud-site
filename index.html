@@ -1,92 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VergeCloud</title>
+  <meta charset="UTF-8">
+  <title>VergeCloud – Edge Performance Platform</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Inter, sans-serif;
-    }
+    * { margin:0; padding:0; box-sizing:border-box; font-family:Inter,sans-serif; }
 
     body {
-      background: linear-gradient(180deg, #eef5ff, #ffffff);
-      color: #0f172a;
+      background: linear-gradient(180deg,#f3f7ff,#ffffff);
+      color:#0f172a;
     }
 
     header {
-      background: white;
-      padding: 18px 60px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-      position: sticky;
-      top: 0;
-      z-index: 100;
+      background:#fff;
+      padding:18px 70px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      box-shadow:0 2px 10px rgba(0,0,0,.05);
+      position:sticky;
+      top:0;
+      z-index:99;
     }
 
     nav a {
-      margin-left: 25px;
-      cursor: pointer;
-      text-decoration: none;
-      color: #1e293b;
-      font-weight: 500;
+      margin-left:25px;
+      text-decoration:none;
+      color:#1e293b;
+      font-weight:500;
     }
 
-    nav a:hover {
-      color: #2563eb;
+    nav a:hover { color:#2563eb; }
+
+    /* HERO */
+    .hero {
+      min-height:85vh;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      align-items:center;
+      padding:80px;
+      gap:60px;
     }
 
+    .hero h1 {
+      font-size:48px;
+      line-height:1.2;
+      margin-bottom:20px;
+    }
+
+    .hero p {
+      font-size:18px;
+      color:#475569;
+      max-width:520px;
+    }
+
+    .hero img {
+      width:100%;
+      max-width:520px;
+    }
+
+    /* SECTIONS */
     .section {
-      display: none;
-      padding: 80px 60px;
-      animation: fadeIn 0.5s ease;
+      padding:90px 80px;
     }
 
-    .section.active {
-      display: block;
+    .section h2 {
+      font-size:36px;
+      margin-bottom:15px;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
+    .section p {
+      color:#475569;
+      margin-bottom:40px;
+      max-width:700px;
     }
 
     .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:35px;
     }
 
     .card {
-      background: white;
-      padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+      background:#fff;
+      padding:30px;
+      border-radius:18px;
+      box-shadow:0 12px 30px rgba(0,0,0,.06);
     }
 
     .card img {
-      width: 100%;
-      border-radius: 12px;
-      margin-bottom: 15px;
+      width:100%;
+      border-radius:12px;
+      margin-bottom:15px;
     }
 
     video {
-      width: 100%;
-      border-radius: 16px;
-      margin-top: 20px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+      width:100%;
+      border-radius:16px;
+      margin-top:30px;
+      box-shadow:0 12px 30px rgba(0,0,0,.15);
     }
 
     footer {
-      text-align: center;
-      padding: 25px;
-      color: #64748b;
+      text-align:center;
+      padding:30px;
+      color:#64748b;
+      background:#f8fafc;
+    }
+
+    @media(max-width:900px){
+      .hero { grid-template-columns:1fr; text-align:center; }
+      .hero img { margin:auto; }
     }
   </style>
 </head>
@@ -95,67 +123,80 @@
 <header>
   <h3>☁️ VergeCloud</h3>
   <nav>
-    <a onclick="showTab('home')">Home</a>
-    <a onclick="showTab('features')">Features</a>
-    <a onclick="showTab('product')">Product</a>
-    <a onclick="showTab('demo')">Demo</a>
-    <a onclick="showTab('contact')">Contact</a>
+    <a href="#home">Home</a>
+    <a href="#features">Features</a>
+    <a href="#product">Product</a>
+    <a href="#demo">Demo</a>
+    <a href="#contact">Contact</a>
   </nav>
 </header>
 
-<!-- HOME -->
-<section id="home" class="section active">
-  <h1>Edge-powered Performance Platform</h1>
-  <p>VergeCloud helps businesses deliver secure, fast, and reliable digital experiences.</p>
+<!-- HERO -->
+<section class="hero" id="home">
+  <div>
+    <h1>Edge-Powered Performance Platform</h1>
+    <p>
+      VergeCloud helps businesses deliver ultra-fast, secure, and reliable digital experiences using
+      global CDN, WAF, DNS, and real-time analytics.
+    </p>
+  </div>
 
-  <img src="https://cdn-icons-png.flaticon.com/512/4149/4149678.png" width="450">
+  <img src="images/hero.png" alt="Cloud Infrastructure">
 </section>
 
 <!-- FEATURES -->
-<section id="features" class="section">
-  <h1>Platform Features</h1>
+<section class="section" id="features">
+  <h2>Platform Features</h2>
+  <p>Everything you need to deliver performance, security and reliability at scale.</p>
+
   <div class="grid">
     <div class="card">
-      <img src="https://cdn-icons-png.flaticon.com/512/4712/4712035.png">
+      <img src="images/cdn.png">
       <h3>Global CDN</h3>
-      <p>Ultra-fast content delivery using edge locations worldwide.</p>
+      <p>Deliver content with low latency using our distributed edge network.</p>
     </div>
+
     <div class="card">
-      <img src="https://cdn-icons-png.flaticon.com/512/1006/1006771.png">
-      <h3>Security</h3>
-      <p>WAF, DDoS mitigation, bot protection.</p>
+      <img src="images/security.png">
+      <h3>Security & WAF</h3>
+      <p>Protect applications from attacks, bots, and abuse.</p>
     </div>
+
     <div class="card">
-      <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png">
-      <h3>Analytics</h3>
-      <p>Real-time traffic and performance monitoring.</p>
+      <img src="images/analytics.png">
+      <h3>Real-Time Analytics</h3>
+      <p>Monitor traffic, threats, and performance in real-time.</p>
     </div>
   </div>
 </section>
 
 <!-- PRODUCT -->
-<section id="product" class="section">
-  <h1>Products</h1>
+<section class="section" id="product">
+  <h2>Our Products</h2>
+  <p>Built for modern, high-traffic digital applications.</p>
+
   <div class="grid">
     <div class="card">
       <h3>Edge CDN</h3>
-      <p>Optimized content delivery with intelligent caching.</p>
+      <p>Faster delivery, reduced latency, global reach.</p>
     </div>
+
     <div class="card">
-      <h3>DNS</h3>
-      <p>Highly available DNS with global routing.</p>
+      <h3>DNS & Traffic Routing</h3>
+      <p>Highly available DNS with intelligent routing.</p>
     </div>
+
     <div class="card">
-      <h3>WAF</h3>
-      <p>Enterprise-grade security for modern apps.</p>
+      <h3>WAF & DDoS</h3>
+      <p>Enterprise-grade security and protection.</p>
     </div>
   </div>
 </section>
 
 <!-- DEMO -->
-<section id="demo" class="section">
-  <h1>Product Demo</h1>
-  <p>Watch VergeCloud in action.</p>
+<section class="section" id="demo">
+  <h2>Platform Demo</h2>
+  <p>See how VergeCloud accelerates and protects applications.</p>
 
   <video controls>
     <source src="video/demo.mp4" type="video/mp4">
@@ -163,25 +204,14 @@
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section">
-  <h1>Contact Us</h1>
-  <p>Reach out to our team for a demo or partnership.</p>
-  <p><b>Email:</b> support@vergecloud.com</p>
+<section class="section" id="contact">
+  <h2>Contact Us</h2>
+  <p>Email: <strong>support@vergecloud.com</strong></p>
 </section>
 
 <footer>
-  © 2026 VergeCloud — All Rights Reserved
+  © 2026 VergeCloud. All rights reserved.
 </footer>
-
-<script>
-  function showTab(tabId) {
-    document.querySelectorAll('.section').forEach(sec => {
-      sec.classList.remove('active');
-    });
-
-    document.getElementById(tabId).classList.add('active');
-  }
-</script>
 
 </body>
 </html>
