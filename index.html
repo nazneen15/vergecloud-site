@@ -8,116 +8,122 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
-    * { margin:0; padding:0; box-sizing:border-box; font-family:Inter,sans-serif; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Inter, sans-serif;
+    }
 
     body {
-      background: linear-gradient(180deg,#f3f7ff,#ffffff);
-      color:#0f172a;
+      background: #f7faff;
+      color: #0f172a;
+      line-height: 1.6;
     }
 
     header {
-      background:#fff;
-      padding:18px 70px;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      box-shadow:0 2px 10px rgba(0,0,0,.05);
-      position:sticky;
-      top:0;
-      z-index:99;
+      background: white;
+      padding: 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     nav a {
-      margin-left:25px;
-      text-decoration:none;
-      color:#1e293b;
-      font-weight:500;
+      margin-left: 25px;
+      text-decoration: none;
+      color: #1e293b;
+      font-weight: 500;
     }
 
-    nav a:hover { color:#2563eb; }
+    nav a:hover {
+      color: #2563eb;
+    }
 
-    /* HERO */
     .hero {
-      min-height:85vh;
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      align-items:center;
-      padding:80px;
-      gap:60px;
+      padding: 100px 60px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 60px;
     }
 
     .hero h1 {
-      font-size:48px;
-      line-height:1.2;
-      margin-bottom:20px;
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 15px;
     }
 
     .hero p {
-      font-size:18px;
-      color:#475569;
-      max-width:520px;
+      font-size: 18px;
+      color: #475569;
+      margin-bottom: 40px;
     }
 
     .hero img {
-      width:100%;
-      max-width:520px;
+      width: 100%;
+      max-width: 600px;
     }
 
-    /* SECTIONS */
     .section {
-      padding:90px 80px;
+      padding: 80px 60px;
     }
 
     .section h2 {
-      font-size:36px;
-      margin-bottom:15px;
+      font-size: 36px;
+      margin-bottom: 20px;
     }
 
-    .section p {
-      color:#475569;
-      margin-bottom:40px;
-      max-width:700px;
-    }
-
-    .grid {
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:35px;
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
     }
 
     .card {
-      background:#fff;
-      padding:30px;
-      border-radius:18px;
-      box-shadow:0 12px 30px rgba(0,0,0,.06);
+      background: white;
+      padding: 25px;
+      border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
     }
 
     .card img {
-      width:100%;
-      border-radius:12px;
-      margin-bottom:15px;
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 12px;
     }
 
     video {
-      width:100%;
-      border-radius:16px;
-      margin-top:30px;
-      box-shadow:0 12px 30px rgba(0,0,0,.15);
+      width: 100%;
+      border-radius: 14px;
+      margin-top: 30px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
     }
 
     footer {
-      text-align:center;
-      padding:30px;
-      color:#64748b;
-      background:#f8fafc;
+      text-align: center;
+      padding: 20px;
+      color: #64748b;
+      background: #e8f0ff;
     }
 
-    @media(max-width:900px){
-      .hero { grid-template-columns:1fr; text-align:center; }
-      .hero img { margin:auto; }
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .hero img {
+        margin: auto;
+      }
     }
   </style>
 </head>
+
 <body>
 
 <header>
@@ -135,37 +141,35 @@
 <section class="hero" id="home">
   <div>
     <h1>Edge-Powered Performance Platform</h1>
-    <p>
-      VergeCloud helps businesses deliver ultra-fast, secure, and reliable digital experiences using
-      global CDN, WAF, DNS, and real-time analytics.
-    </p>
+    <p>VergeCloud helps businesses deliver ultra-fast, secure, and reliable digital experiences using global CDN, WAF, DNS, and real-time analytics.</p>
+
+    <!-- Optional CTA -->
+    <a href="#product" style="padding:12px 24px; background:#2563eb; color:white; border-radius:8px; text-decoration:none; font-weight:600;">Explore Products</a>
   </div>
 
-  <img src="images/hero.png" alt="Cloud Infrastructure">
+  <img src="images/hero.png" alt="Cloud infrastructure illustration">
 </section>
 
 <!-- FEATURES -->
 <section class="section" id="features">
   <h2>Platform Features</h2>
-  <p>Everything you need to deliver performance, security and reliability at scale.</p>
-
-  <div class="grid">
+  <div class="cards">
     <div class="card">
-      <img src="images/cdn.png">
+      <img src="images/cdn.png" alt="CDN illustration">
       <h3>Global CDN</h3>
-      <p>Deliver content with low latency using our distributed edge network.</p>
+      <p>Low-latency content delivery across edge servers for faster user experiences.</p>
     </div>
 
     <div class="card">
-      <img src="images/security.png">
+      <img src="images/security.png" alt="Security illustration">
       <h3>Security & WAF</h3>
-      <p>Protect applications from attacks, bots, and abuse.</p>
+      <p>Enterprise-grade protection including WAF, bot defense, and traffic filtering.</p>
     </div>
 
     <div class="card">
-      <img src="images/analytics.png">
+      <img src="images/analytics.png" alt="Analytics illustration">
       <h3>Real-Time Analytics</h3>
-      <p>Monitor traffic, threats, and performance in real-time.</p>
+      <p>Insightful dashboards to track performance, threats, and optimization metrics.</p>
     </div>
   </div>
 </section>
@@ -173,22 +177,22 @@
 <!-- PRODUCT -->
 <section class="section" id="product">
   <h2>Our Products</h2>
-  <p>Built for modern, high-traffic digital applications.</p>
+  <p>Designed to scale digital experiences securely and efficiently.</p>
 
-  <div class="grid">
+  <div class="cards">
     <div class="card">
       <h3>Edge CDN</h3>
-      <p>Faster delivery, reduced latency, global reach.</p>
+      <p>Accelerate web content with intelligent caching strategies.</p>
     </div>
 
     <div class="card">
       <h3>DNS & Traffic Routing</h3>
-      <p>Highly available DNS with intelligent routing.</p>
+      <p>Highly available DNS with traffic steering and failover.</p>
     </div>
 
     <div class="card">
-      <h3>WAF & DDoS</h3>
-      <p>Enterprise-grade security and protection.</p>
+      <h3>WAF & DDoS Protection</h3>
+      <p>Robust protection against vulnerabilities and large-scale attacks.</p>
     </div>
   </div>
 </section>
@@ -196,7 +200,7 @@
 <!-- DEMO -->
 <section class="section" id="demo">
   <h2>Platform Demo</h2>
-  <p>See how VergeCloud accelerates and protects applications.</p>
+  <p>Watch VergeCloud in action and see performance gains for yourself:</p>
 
   <video controls>
     <source src="video/demo.mp4" type="video/mp4">
@@ -206,11 +210,12 @@
 <!-- CONTACT -->
 <section class="section" id="contact">
   <h2>Contact Us</h2>
-  <p>Email: <strong>support@vergecloud.com</strong></p>
+  <p>Have questions, need support, or want a custom enterprise plan?</p>
+  <p><strong>Email:</strong> support@vergecloud.com</p>
 </section>
 
 <footer>
-  © 2026 VergeCloud. All rights reserved.
+  © 2026 VergeCloud — All Rights Reserved
 </footer>
 
 </body>
