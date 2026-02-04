@@ -1,4 +1,6 @@
-/* RESET */
+/* ========================= */
+/* RESET                     */
+/* ========================= */
 * {
   margin: 0;
   padding: 0;
@@ -11,23 +13,27 @@ body {
   color: #0f172a;
 }
 
-/* GLOBAL IMAGE FIX (VERY IMPORTANT) */
+/* GLOBAL IMAGE FIX */
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-/* CONTAINER */
+/* ========================= */
+/* CONTAINER                 */
+/* ========================= */
 .container {
   max-width: 1200px;
   margin: auto;
   padding: 0 24px;
 }
 
-/* HEADER */
+/* ========================= */
+/* HEADER                    */
+/* ========================= */
 header {
-  background: #fff;
+  background: #ffffff;
   border-bottom: 1px solid #e5e7eb;
 }
 
@@ -49,7 +55,9 @@ nav a:hover {
   color: #2563eb;
 }
 
-/* HERO */
+/* ========================= */
+/* HERO SECTION              */
+/* ========================= */
 .hero {
   padding: 90px 0;
   background: linear-gradient(180deg, #f8fbff, #ffffff);
@@ -73,13 +81,24 @@ nav a:hover {
   line-height: 1.6;
 }
 
-.hero img {
-  width: 100%;
-  max-width: 480px;
-  margin: auto;
+/* HERO IMAGE – FINAL FIX */
+.hero-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 320px;
+  background: #eef2ff;
+  border-radius: 14px;
 }
 
-/* SECTIONS */
+.hero-image img {
+  width: 100%;
+  max-width: 480px;
+}
+
+/* ========================= */
+/* SECTIONS                  */
+/* ========================= */
 .section {
   padding: 80px 0;
 }
@@ -90,7 +109,9 @@ nav a:hover {
   margin-bottom: 50px;
 }
 
-/* CARDS */
+/* ========================= */
+/* FEATURE CARDS             */
+/* ========================= */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -98,10 +119,10 @@ nav a:hover {
 }
 
 .card {
-  background: white;
+  background: #ffffff;
   padding: 30px;
   border-radius: 14px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.05);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
   text-align: center;
 }
 
@@ -118,7 +139,9 @@ nav a:hover {
   color: #475569;
 }
 
-/* VIDEO */
+/* ========================= */
+/* VIDEO SECTION             */
+/* ========================= */
 .video-section {
   text-align: center;
 }
@@ -127,10 +150,12 @@ video {
   width: 100%;
   max-width: 800px;
   border-radius: 14px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
 }
 
-/* FOOTER */
+/* ========================= */
+/* FOOTER                    */
+/* ========================= */
 footer {
   background: #0f172a;
   color: #cbd5f5;
@@ -163,7 +188,11 @@ footer {
     text-align: center;
   }
 
-  .hero img {
+  .hero-image {
+    min-height: 260px;
+  }
+
+  .hero-image img {
     max-width: 360px;
   }
 }
